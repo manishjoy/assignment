@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Layout 3</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		/*Resizing on load*/
+		var sWidth = $(window).width();
+		if(sWidth>=925 && sWidth<=1258){
+			var mainWidth = $(".main").width();
+			//console.log(mainWidth);
+			var leftWidth = mainWidth- 353;
+			//console.log(leftWidth);
+			$(".left").css("width", leftWidth);
+		}
+		if(sWidth<=924)
+		{
+			$(".left").css("width", "100%");
+		}
+
+		//console.log($(".right").width());
+		var click_count=0;
+		$("#menu-btn").click(function(e){
+			e.preventDefault();
+			if(click_count==0){
+				$(".menu-res").css("display","block");
+				$(".menu").css("height","90px");
+				click_count++;
+			}
+			else{
+				$(".menu-res").css("display","none");
+				$(".menu").css("height","50px");
+				click_count=0;
+			}
+			
+		});
+		/*resizing code*/
+		$(window).resize(function() { 
+			var sWidth = $(window).width();
+			if(sWidth>=925 && sWidth<=1258){
+				var mainWidth = $(".main").width();
+				//console.log(mainWidth);
+				var leftWidth = mainWidth- 353;
+				//console.log(leftWidth);
+				$(".left").css("width", leftWidth);
+			}
+			if(sWidth<=924)
+			{
+				$(".left").css("width", "100%");
+			}
+			if(sWidth>1258){
+				$(".left").css("width", "66%");
+			}
+		});
+
+	});
+	</script>
+</head>
+<body>
+<div class="header">
+	<div>
+			<a href="#" id="menu-btn"><img src="menu-icon.png"></a>
+	</div>
+	<div class="menu">
+		<div class="menu-norm">
+			<ul>
+				<li><a href="#">Layout 1</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="menu-res">
+			<a href="#">Layout 1</a>
+			<a href="#">About</a>
+			<a href="#">Services</a>
+			<a href="#">Contact</a>
+		</div>
+	</div>
+</div>
+<div class="main">
+	<div class="left">
+		<div class="pagehead">
+			<div class="part1">Blog Post Title</div>
+			<div class="author">by <a href="#">Test</a></div>
+		</div>
+		<hr>
+		<div class="time">
+			<img id="a" src="images/Clock.png"><p id="d"> Posted on February 6, 2016 at 5 PM</p>
+		</div>
+		<hr>
+		<div class="img">
+			<img src="images/default.png" width="100%">
+		</div>
+		<hr>
+		<div class="summary">
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed a justo eu tortor semper congue. Nulla orci dolor, consequat sed consequat at, iaculis quis leo. Donec at semper sem.</p>
+		</div>
+		<div class="post">
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation</p>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation</p>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation</p>
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation</p>
+		</div>
+	</div>
+	<div class="right">
+		<div class="box">
+			<div class="boxItem" id="srch">
+				<p>Blog Search</p>
+				<div class="search">
+					<input type="text" class="srchBox">
+					<button type="button" class="btn"><img src="images/download.png" alt="" width="70%" /></button>
+				</div>	
+			</div>
+		</div>
+		<div class="box" id="category">
+			<div class="boxItem">
+				<p>Blog Categories</p>
+				<div class="listBox">
+					<ul>
+						<li><a href="#">Category Name</a></li>
+						<li><a href="#">Category Name</a></li>
+						<li><a href="#">Category Name</a></li>
+						<li><a href="#">Category Name</a></li>
+					</ul>
+				</div>
+				<div class="listBox" id="list2">
+					<ul>
+						<li><a href="#">Category Name</a></li>
+						<li><a href="#">Category Name</a></li>
+						<li><a href="#">Category Name</a></li>
+						<li><a href="#">Category Name</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="box" id="well">
+			<div class="boxItem">
+				<p>Side Widget well</p>
+				<p class="widgetDesc">Ut ultrices quis lacus a imperdiet abc . Suspendisse potenti. Sed venenatis orci id elit luctus scelerisque et nec dolor. Mauris in interdum turpis.</p>	
+			</div>
+		</div>
+	</div>
+	<div style="clear:both;"></div>
+	<hr>
+	<div class="copyright">Manish Joy &copy; 2016</div>
+</div>
+</body>
+</html>	

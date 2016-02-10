@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Layout 2</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var click_count=0;
+		$("#menu-btn").click(function(e){
+			e.preventDefault();
+			if(click_count==0){
+				$(".menu-res").css("display","block");
+				$(".menu").css("height","90px");
+				click_count++;
+			}
+			else{
+				$(".menu-res").css("display","none");
+				$(".menu").css("height","50px");
+				click_count=0;
+			}
+			
+		});
+		$(".menu-res").css("display","none");
+		$(".menu").css("height","60px");
+	});
+	</script>
+</head>
+<body>
+<div class="header">
+	<div>
+			<a href="#" id="menu-btn"><img src="menu-icon.png"></a>
+	</div>
+	<div class="menu">
+		<div class="menu-norm">
+			<ul>
+				<li><a href="#">Layout 1</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Services</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</div>
+		<div style="clear:both;"></div>
+		<div class="menu-res">
+			<a href="#">Layout 1</a>
+			<a href="#">About</a>
+			<a href="#">Services</a>
+			<a href="#">Contact</a>
+		</div>
+	</div>
+</div>
+<div class="main">
+	<div class="head-box">
+		<div class="pagehead">
+			<div class="heading">Sample Heading</div>
+		</div>
+		<div class="pText">
+			<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+		</div>
+		<div class="btn-wrap">
+			<button class="head-btn">Call to Action!</button>
+		</div>
+	</div>
+	<div style="clear:both;"></div>
+	<hr>
+	<div class="content">
+		<div class="head">Latest Features</div>
+		<div class="row">
+			<div class="box">
+				<div class="img">
+					<img src="default.png" width="100%">
+				</div>
+				<div class="box-head">
+					Feature Label
+				</div>
+				<div class="box-text">
+					<p>Lorem Ipsum is dummy text of the printing industry.</p>
+				</div>
+				<div class="btn-wrap">
+					<button class="btn1">Buy Now!</button>
+					<button class="btn2">More Info</button>
+				</div>
+			</div>
+			<div class="box">
+				<div class="img">
+					<img src="default.png" width="100%">
+				</div>
+				<div class="box-head">
+					Feature Label
+				</div>
+				<div class="box-text">
+					<p>Lorem Ipsum is dummy text of the printing industry.</p>
+				</div>
+				<div class="btn-wrap">
+					<button class="btn1">Buy Now!</button>
+					<button class="btn2">More Info</button>
+				</div>
+			</div>
+			<div class="box">
+				<div class="img">
+					<img src="default.png" width="100%">
+				</div>
+				<div class="box-head">
+					Feature Label
+				</div>
+				<div class="box-text">
+					<p>Lorem Ipsum is dummy text of the printing industry.</p>
+				</div>
+				<div class="btn-wrap">
+					<button class="btn1">Buy Now!</button>
+					<button class="btn2">More Info</button>
+				</div>
+			</div>
+			<div class="box" id="last-box">
+				<div class="img">
+					<img src="default.png" width="100%">
+				</div>
+				<div class="box-head">
+					Feature Label
+				</div>
+				<div class="box-text">
+					<p>Lorem Ipsum is dummy text of the printing industry.</p>
+				</div>
+				<div class="btn-wrap">
+					<button class="btn1">Buy Now!</button>
+					<button class="btn2">More Info</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div style="clear:both;"></div>
+	<hr>
+	<div style="clear:both;"></div>
+	<div class="copyright">Manish Joy &copy; 2016</div>
+</div>
+</body>
+</html>
