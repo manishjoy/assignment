@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Shoe Store</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		var pWidth = $(".box1-container").width()/3- 31;
+		$(".column").css("width",pWidth);
+		var ht = $(".box1-container").height();
+		$(".col-gap").css("height",ht);
+	});
+	</script>
+</head>
+<body>
+<div class="header">
+	<div class="menu1">
+		<div class="left-menu1">
+			<div class="bar">|</div>
+			<a href="#">HOME</a>
+			<div class="bar">|</div>
+			<a href="#">ABOUT US</a>
+			<div class="bar">|</div>
+			<a href="#">CONTACT US	</a>
+			<div class="bar">|</div>
+		</div>
+		<div class="right-menu1">
+			<div class="flag"><img src="images/flag.png"></div>
+			<div class="searchbox">
+				<input type="text" placeholder="Search" id="text1">
+				<div class="menu1-arrow">
+					<img src="images/menu1-arrow.png" alt="->">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="main">
+	<div class="logo-container">
+		<div class="logo">
+			<img src="images/logo.png" width="250px">
+		</div>
+		<div class="login">
+			<div class="loginId">
+				<div class="text">Welcome</div><div id="lock"><img src="images/lock.png"></div> <div class="text">Login</div>
+			</div>
+			<div style="clear:both;"></div>
+			<div class="links">
+				<ul>
+					<li><a href="#">My Account</a></li>
+					<li><a href="#">My Wishlist</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main-menu">
+		<div class="menu-left">
+			<ul>
+				<li><a href="#">ONLINE STORE</a></li>
+				<li class="main-menu-div"><img src="images/dotedlink.png"></li>
+				<li><a href="#">ABOUT US</a></li>
+				<li class="main-menu-div"><img src="images/dotedlink.png"></li>
+				<li><a href="#">DELIVERY</a></li>
+				<li class="main-menu-div"><img src="images/dotedlink.png"></li>
+				<li><a href="#">FAQS</a></li>
+				<li class="main-menu-div"><img src="images/dotedlink.png"></li>
+				<li><a href="#">CONTACTS</a></li>
+				<li class="main-menu-div"><img src="images/dotedlink.png"></li>
+			</ul>
+		</div>
+		<div class="menu-right">
+			<ul>
+				<li><a href="#"><img src="images/cart.png"></a></li>
+				<li><a href="#"><span>My Cart</span></a></li>
+				<li><a href="#"><img src="images/tag.png"></a></li>
+				<li><a href="#"><span>Checkout</span></a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="slide">
+		<div class="left-slide">
+			<p id="a">HOT</p>
+			<p id="b">SALE</p>
+			<p id="c">COLLECTION</p>
+			<p id="d">2013</p>
+			<div class="view">
+				<a href="#">VIEW COLLECTIONS&nbsp;<img src="images/arr.png" alt=""/></a>
+			</div>
+		</div>
+		<div class="right-slide">
+			<img src="images/default.png">
+		</div>
+	</div>
+	<div class="content">
+		<div class="left-content">
+			<div class="heading">Featured Brands</div>
+			<div class="box-container">
+				<div class="box">
+					<div class="img"><img src="images/141*115.png" alt=""/></div>
+					<hr>
+					<p class="p-head">PRODUCT#001</p>
+				</div>
+				<div class="shadow"><img src="images/devider.png" width="100%"></div>
+			</div>
+			<div class="box-container">
+				<div class="box">
+					<div class="img"><img src="images/141*115.png" alt=""/></div>
+					<hr>
+					<p class="p-head">PRODUCT#001</p>
+				</div>
+				<div class="shadow"><img src="images/devider.png" width="100%"></div>
+			</div>
+			<div class="box-container">
+				<div class="box">
+					<div class="img"><img src="images/141*115.png" alt=""/></div>
+					<hr>
+					<p class="p-head">PRODUCT#001</p>
+				</div>
+				<div class="shadow"><img src="images/devider.png" width="100%"></div>
+			</div>
+			<div class="box-container" id="last-box">
+				<div class="box">
+					<div class="img"><img src="images/141*115.png" alt=""/></div>
+					<hr>
+					<p class="p-head">PRODUCT#001</p>
+				</div>
+				<div class="shadow"><img src="images/devider.png" width="100%"></div>
+			</div>
+			<div class="heading">New Brands</div>
+			<div class="box1-container">
+				<div class="column">
+					<div class="col-head"><img src="images/kids.png"></div>
+					<div class="box1">
+						<div class="img"><img src="images/170*130.png" alt=""/></div>
+						<p>phasellus a purus diam.vestib ulum pulvinar iaculis nequeio.</p>
+						<div class="prc">
+							<p id="price"><sup>$</sup><span>499.</span><sup>00</sup	></p>
+							<img src="images/button.png">
+						</div>
+					</div>
+					<div class="box1-shadow"><img src="images/devider.png" width="100%"></div>
+					<div style="clear:both;"></div>
+					<div class="box1">
+						<div class="img"><img src="images/170*130.png" alt=""/></div>
+						<p>phasellus a purus diam.vestib ulum pulvinar iaculis nequeio.</p>
+						<div class="prc">
+							<p id="price"><sup>$</sup><span>499.</span><sup>00</sup	></p>
+							<img src="images/button.png">
+						</div>
+					</div>
+				</div>
+				<div class="col-gap"><img src="images/footerdevoder.png" height="100%" width="1px;"></div>
+				<div class="column">
+					<div class="col-head"><img src="images/men.png"></div>
+					<div class="box1">
+						<div class="img"><img src="images/170*130.png" alt=""/></div>
+						<p>phasellus a purus diam.vestib ulum pulvinar iaculis nequeio.</p>
+						<div class="prc">
+							<p id="price"><sup>$</sup><span>499.</span><sup>00</sup	></p>
+							<img src="images/button.png">
+						</div>
+					</div>
+					<div class="box1-shadow"><img src="images/devider.png" width="100%"></div>
+					<div style="clear:both;"></div>
+					<div class="box1">
+						<div class="img"><img src="images/170*130.png" alt=""/></div>
+						<p>phasellus a purus diam.vestib ulum pulvinar iaculis nequeio.</p>
+						<div class="prc">
+							<p id="price"><sup>$</sup><span>499.</span><sup>00</sup	></p>
+							<img src="images/button.png">
+						</div>
+					</div>
+				</div>
+				<div class="col-gap"><img src="images/footerdevoder.png" height="100%" width="1px;"></div>
+				<div class="column">
+					<div class="col-head"><img src="images/women.png"></div>
+					<div class="box1">
+						<div class="img"><img src="images/170*130.png" alt=""/></div>
+						<p>phasellus a purus diam.vestib ulum pulvinar iaculis nequeio.</p>
+						<div class="prc">
+							<p id="price"><sup>$</sup><span>499.</span><sup>00</sup	></p>
+							<img src="images/button.png">
+						</div>
+					</div>
+					<div class="box1-shadow"><img src="images/devider.png" width="100%"></div>
+					<div style="clear:both;"></div>
+					<div class="box1">
+						<div class="img"><img src="images/170*130.png" alt=""/></div>
+						<p>phasellus a purus diam.vestib ulum pulvinar iaculis nequeio.</p>
+						<div class="prc">
+							<p id="price"><sup>$</sup><span>499.</span><sup>00</sup	></p>
+							<img src="images/button.png">
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="browse">
+				<p><span>Browse All	&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;</span>New Shoes &nbsp;&nbsp;|&nbsp;&nbsp; Featured Shoes &nbsp;&nbsp;|&nbsp;&nbsp; A-Z</p>
+			</div>
+		</div>
+		<div class="right-content">
+			<div id="cart">
+				<div class="head">My Cart</div>
+				<p>You have no item in your shopping cart.</p>
+			</div>
+			<div id="compare">
+				<div class="head">Compare Products</div>
+				<p>You have no item to compare.</p>
+			</div>
+			<div id="best-seller">
+				<div class="head">Best Seller</div>
+				<div class="row">
+					<div class="row-left">
+						<center><img src="images/75*75.png"></center>
+					</div>
+					<div class="row-right">
+						<p class="p-head">Product#001</p>
+						<p>Vivamus euismodio vehicula erat sed ..</p>
+						<p><strike>$699</strike> - <span>$599</span></p>
+					</div>
+				</div>
+				<div style="clear:both"></div>
+				<hr>
+				<div class="row">
+					<div class="row-left">
+						<center><img src="images/75*75.png"></center>
+					</div>
+					<div class="row-right">
+						<p class="p-head">Product#001</p>
+						<p>Vivamus euismodio vehicula erat sed ..</p>
+						<p><strike>$699</strike> - <span>$599</span></p>
+					</div>
+				</div>
+				<div style="clear:both"></div>
+				<hr>
+				<div class="row">
+					<div class="row-left">
+						<center><img src="images/75*75.png"></center>
+					</div>
+					<div class="row-right">
+						<p class="p-head">Product#001</p>
+						<p>Vivamus euismodio vehicula erat sed ..</p>
+						<p><strike>$699</strike> - <span>$599</span></p>
+					</div>
+				</div>
+			</div>
+			<div id="tags">
+				<div class="head">Popular Tags</div>
+				<pre>apple  samsung  lg  dell  hp  
+ipad  lcd  led  cam  zoom</pre>
+			</div>
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+	
+</div>
+<div class="footer-container">
+	<div class="footer">
+		<div class="part-1">
+            <p id="p">Newsletter</p>
+            <input type="text" id="text2">
+            <a href="#"><button type="button" id="bt2">GO</button></a>
+            <p id="q">
+            Please enter your valid email.we wont spam
+            </p>
+        </div>
+        <div class="footer-gap"><img src="images/footerdevoder.png" height="100px"></div>
+        <div class="part-2">
+        	<div class="cart"><img src="images/cart12.png" height="100%"></div>
+        	<div class="yellow">
+        		<p id="x">Free Shipping</p>
+        		<p id="y">on orders over $250</p>
+        	</div>
+        </div>
+        <div class="footer-gap"><img src="images/footerdevoder.png" height="100px"></div>
+        <div class="part-3">
+        	<p id="p">Follow Us</p>
+        	<div class="social">
+        		<a href="#"><img src="images/iconfacebook.png"></a>
+        		<a href="#"><img src="images/twitter.png"></a>
+        		<a href="#"><img src="images/linkdin.png"></a>
+        		<a href="#"><img src="images/rss.png"></a>
+        	</div>
+        </div>
+	</div>
+</div>
+<div class="after-footer">
+	<p>
+		<a href="#">About Us</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="#">Customer Service</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="#">Site Map</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="#">Search Terms</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="#">Advanced Searchs</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="#">Orders & Returns</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+		<a href="#">Contact Us</a>
+	</p>
+	<div style="clear:both;"></div>
+	<p> &copy; 2013 shoes store.All Rights Reserved.</p>
+</div>
+</body>
+</html>
