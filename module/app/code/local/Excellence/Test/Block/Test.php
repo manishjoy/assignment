@@ -16,27 +16,8 @@ class Excellence_Test_Block_Test extends Mage_Core_Block_Template
     }
     
     public function showTable($module){
-        echo "<table border='3' style='width:100%;'><tr><th>".$this->__('Id')."</th><th>".$this->__('Title')."</th><th>".$this->__('Content')."</th><th>".$this->__('Status')."</th><th>".$this->__('Edit')."</th><th>".$this->__('Delete')."</th></tr>";
-        $news = Mage::getModel('test/'.$module)->getCollection();
-        foreach ($news as $data) {
-            echo "<tr>";
-            echo "<td>".$data->getId()."</td>";
-            echo "<td>".$data->getTitle()."</td>";
-            echo "<td>".$data->getContent()."</td>";
-            if($data->getStatus()==1){
-                echo "<td>".$this->__('Enabled')."</td>";
-            }
-            else{
-                echo "<td>".$this->__('Disabled')."</td>";
-            }
-                
-            echo "<td><a href=".$this->getEditUrl($module, $data->getId()).">".$this->__('Edit')."</a></td>";
-            echo "<td><a href=".$this->getDeleteUrl($module, $data->getId()).">".$this->__('Delete')."</a></td>";
-            echo "</tr>";
-        }
-
-        echo "</table>";
-        echo "<br><br><h4><a href=".$this->getAddUrl($module).">".$this->__('Add Row')."</a></h4>";
+        $data = Mage::getModel('test/'.$module)->showData();
+        return $data;
     }
     public function getEditUrl($module_name, $row_id){
         return Mage::getUrl('test/index/edit', array('module_name' => $module_name, 'id'=>$row_id));
@@ -47,13 +28,9 @@ class Excellence_Test_Block_Test extends Mage_Core_Block_Template
     }
 
     public function getAddUrl($module_name){
-        return Mage::getUrl('test/index/loadadd', array('module_name' => $module_name));
+        return Mage::getUrl('test/index/add', array('module_name' => $module_name));
     }
 
-    public function addFormHandler(){
-        return Mage::getUrl('test/index/add');
-        //echo $row;
-    }
 
 
 
