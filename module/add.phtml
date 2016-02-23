@@ -4,7 +4,7 @@
         ?>
         <div>
         	<h4><?php echo $this->__('Edit Row'); ?></h4>
-            <form id="myform" action="<?php echo $this->addFormHandler(); ?>" method="POST">
+            <form id="myform" action="" method="POST">
                 <label>Title:</label><br><input type="text" name="title" id= "title" placeholder="Title" /><br/>
                 <label>Content:</label><br><textarea type="text" name="content" id= "content" placeholder="Content" ></textarea><br/>
                 <label>Status:</label><br>
@@ -18,18 +18,11 @@
 
 
 <?php
-//$news = Mage::getModel('test/test');
-//if(isset($_POST["sub"])){
-    //$title = Mage::app()->getRequest()->getParam("title");
-    //echo $title;
-	/*$news->setData($row);
-    try{
-                   $news->save();
-                   echo "Data inserted successfully";
-                         
-        }
-               catch(Exception $e){
-                   echo $e->getMessage();
-        }*/
-//}
+$sub = Mage::app()->getRequest()->getParam("sub");
+if(isset($sub)){
+    $module_name = Mage::app()->getRequest()->getParam("module_name");
+    $post = Mage::app()->getRequest()->getParams();
+    $this->addFormHandler();
+    //Mage::getUrl('test/index/add', array('id'=>1));//'module_name'=>$module_name, 'title' => $title, 'content' => $content, 'status' => $status));
+}
 ?>

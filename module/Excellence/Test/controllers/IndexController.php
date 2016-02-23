@@ -23,12 +23,12 @@ class Excellence_Test_IndexController extends Mage_Core_Controller_Front_Action
 			session_write_close();
 		}
     }
-    public function addAction(){
+    public function loadAddAction(){
     	$this->loadLayout();     
 		$this->renderLayout();
 
 		$module_name = Mage::app()->getRequest()->getParam("module_name");
-		
+
 		/*$row_data = Mage::app()->getRequest()->getParam("row_data");
 		if(isset($row_data)){
 				$news->setData($row_data);

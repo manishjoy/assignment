@@ -47,15 +47,11 @@ class Excellence_Test_Block_Test extends Mage_Core_Block_Template
     }
 
     public function getAddUrl($module_name){
-        return Mage::getUrl('test/index/add', array('module_name' => $module_name));
+        return Mage::getUrl('test/index/loadadd', array('module_name' => $module_name));
     }
 
     public function addFormHandler(){
-        $module_name = Mage::app()->getRequest()->getParam("module_name");
-        $title = Mage::app()->getRequest()->getParam("title");
-        $content = Mage::app()->getRequest()->getParam("content");
-        $status = Mage::app()->getRequest()->getParam("status");
-        return Mage::getUrl('test/index/add', array('module_name'=>$module_name, 'title' => $title, 'content' => $content, 'status' => $status));
+        return Mage::getUrl('test/index/add');
         //echo $row;
     }
 
